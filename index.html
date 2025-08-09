@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocTools - PDF Management Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>DocTools</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#" class="active">Home</a>
+                    <a href="#tools">Tools</a>
+                    <a href="#features">Features</a>
+                    <a href="#" id="history-link">History</a>
+                </div>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" id="login-btn">Login</button>
+                    <button class="btn btn-primary" id="signup-btn">Sign Up</button>
+                    <button class="btn btn-outline" id="logout-btn" style="display: none;">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Your Complete PDF Solution</h1>
+                <p>Convert, edit, compress, and manage PDFs with our free online tools</p>
+                <button class="btn btn-primary btn-large" id="try-now-btn">Try Now</button>
+            </div>
+        </section>
+
+        <section class="tools-section" id="tools">
+            <div class="container">
+                <h2 class="section-title">All PDF Tools</h2>
+                <div class="tools-grid" id="tools-grid">
+                    <!-- Tools will be added dynamically by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="upload-area" id="upload-area">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h2>Upload Your Files</h2>
+                <p>Drag and drop files here or click to browse</p>
+                <input type="file" id="file-input" class="file-input" multiple>
+                <button class="btn btn-primary" id="browse-btn">Browse Files</button>
+                <div class="file-list" id="file-list"></div>
+            </div>
+
+            <div class="tool-options" id="tool-options"></div>
+            <div class="spinner" id="spinner"></div>
+            <div class="result-section" id="result-section"></div>
+            <div class="history-section" id="history-section"></div>
+        </div>
+
+        <section class="features-section" id="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose DocTools?</h2>
+                <div class="features-grid" id="features-grid">
+                    <!-- Features will be added dynamically by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content" id="footer-content">
+                <!-- Footer content will be added dynamically by JavaScript -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DocTools. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login to Your Account</h3>
+                <button class="modal-close" id="login-close">&times;</button>
+            </div>
+            <form class="auth-form" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" class="form-control" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-large">Login</button>
+                </div>
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="signup-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create an Account</h3>
+                <button class="modal-close" id="signup-close">&times;</button>
+            </div>
+            <form class="auth-form" id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm">Confirm Password</label>
+                    <input type="password" id="signup-confirm" class="form-control" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-large">Sign Up</button>
+                </div>
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
